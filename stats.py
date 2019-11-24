@@ -9,7 +9,7 @@ def getCoefsAndPValues(x, y):
     fit = sm.OLS(y, regressors).fit()
     return fit.params, fit.pvalues
 
-def getCoefsAndSlopeCI(x, y, nIterations=30000):
+def getCoefsAndSlopeCI(x, y, nIterations=10000):
 
     def getSlope(data):
         x = data[:,0]
@@ -23,6 +23,6 @@ def getCoefsAndSlopeCI(x, y, nIterations=30000):
     coefs = fit.params
 
     bootData = np.column_stack((x,y))
-    bootRes = bs.bootstrap(bootData, stat_func=getSlope, num_iterations=1000)
+    bootRes = bs.bootstrap(bootData, stat_func=getSlope, num_iterations=nIterations)
     return coefs, (bootRes.lower_bound, bootRes.upper_bound)
 
