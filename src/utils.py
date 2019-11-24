@@ -1,4 +1,5 @@
 
+import os
 import matplotlib.pyplot as plt
 
 def getDataSubset(data, condColName1, condValue1, condColName2, condValue2):

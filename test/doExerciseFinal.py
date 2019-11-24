@@ -17,7 +17,7 @@ def getSlopeCILegend(stats, legendPattern="95% CI=[{:.2f},{:.2f}]"):
     return legend
 
 dataFilename = "../data/All_three_exp_conditions_3.csv"
-figFilename = "figures/absSpeedVsSpikes.png"
+figFilename = "figures/absSpeedVsSpikesFinal.png"
 df = pd.read_csv(dataFilename, index_col=0)
 
 print(df.columns.values)
