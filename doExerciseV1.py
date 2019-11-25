@@ -5,7 +5,7 @@ import pandas as pd
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
 
-dataFilename = "../data/All_three_exp_conditions_3.csv"
+dataFilename = "data/All_three_exp_conditions_3.csv"
 figFilename = "figures/absSpeedVsSpikesV1.png"
 data = pd.read_csv(dataFilename, index_col=0)
 
