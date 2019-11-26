@@ -25,3 +25,4 @@ def getCoefsAndSlopeCI(x, y, nIterations=10000):
     bootData = np.column_stack((x,y))
     bootRes = bs.bootstrap(bootData, stat_func=getSlope, num_iterations=nIterations)
     return coefs, (bootRes.lower_bound, bootRes.upper_bound)
+
