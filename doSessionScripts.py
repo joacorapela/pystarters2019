@@ -1,4 +1,7 @@
 
+################################################################################
+
+
 def make_a_sound():
     print("quack")
 
@@ -19,14 +22,14 @@ else:
 def echo(aString):
     return aString + " " + aString
 
-echo("Pystarters")
+print(echo("Pystarters"))
 
 ################################################################################
 
 def greet(firstName, lastName, msg):
-   """This function greets to
-   the person with the provided message"""
-   print("Hello", firstName + ' ' + lastName + ', ' + msg)
+    """This function greets to
+    the person with the provided message"""
+    print("Hello", firstName + ' ' + lastName + ', ' + msg)
 
 greet("Monica", "Garcia", "Good morning!")
 
@@ -54,18 +57,18 @@ greet("Bruce", "Knight", "How do you do?")
 
 # non-default arguments cannot follow default arguments
 
-# def greet(msg="Good morning!", firstName, lastName):
-#    """
-#    This function greets to
-#    the person with the
-#    provided message.
-# 
-#    If message is not provided,
-#    it defaults to "Good
-#    morning!"
-#    """
-# 
-#    print("Hello", firstName + ' ' + lastName + ', ' + msg)
+def greet(msg="Good morning!", firstName, lastName):
+   """
+   This function greets to
+   the person with the
+   provided message.
+
+   If message is not provided,
+   it defaults to "Good
+   morning!"
+   """
+
+   print("Hello", firstName + ' ' + lastName + ', ' + msg)
 
 ################################################################################
 
@@ -73,9 +76,7 @@ greet("Bruce", "Knight", "How do you do?")
 # arguments
 
 def greet(firstName, lastName, msg):
-   """This function greets to
-   the person with the provided message"""
-   print("Hello", firstName + ' ' + lastName + ', ' + msg)
+    print("Hello", firstName + ' ' + lastName + ', ' + msg)
 
 greet("How do you do?", "Bruce", "Knight")
 
@@ -90,7 +91,7 @@ greet(msg="How do you do?", lastName="Smith", firstName="Tom")
 greet("Tom", lastName="Smith", msg="How do you do?")
 
 # Error: positional arguments must preced keyword arguments
-# greet(firstName="Tom", "Smith", msg="How do you do?")
+greet(firstName="Tom", "Smith", msg="How do you do?")
 
 ################################################################################
 
@@ -129,3 +130,12 @@ cheeseshop("Limburger",
            sketch="Cheese Shop Sketch")
 
 ################################################################################
+
+def multiplyMany(*numbers, scale=10):
+    product = 1
+    for number in numbers:
+        product *= number
+    return product*scale
+
+multiplyMany(1, 2, 3)
+
