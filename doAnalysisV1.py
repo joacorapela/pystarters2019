@@ -118,3 +118,9 @@ ipdb.set_trace()
 
 # 1. Modify script to only print the ylabel in the left panel and the xlabel in the  center panel
 # 2. Build and call a function to avoid code repetition
+# 3. Eight panels
+
+# . Exceptions
+# . Git commits
+# . Push to github
+# . CIs
