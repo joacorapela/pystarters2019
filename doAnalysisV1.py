@@ -25,10 +25,6 @@ print(regions)
 # We will make a figure with len(trialConditions)==3 panels
 f, axes = plt.subplots(1, len(trialConditions), sharey=True)
 
-plotPanel(data, "Vestibular")
-plotPanel(data, "VisVes")
-plotPanel(data, "Visual")
-
 ### Start first panel
 
 # Extract the subset of the data corresponding to vestibular-only stimulation
